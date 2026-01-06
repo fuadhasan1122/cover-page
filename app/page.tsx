@@ -136,7 +136,13 @@ export default function Home() {
           <div className="space-y-6 animate-in slide-in-from-bottom-4 pb-12">
             
             <FormSection title="University Information" icon={<GraduationCap size={18}/>} gradient="from-blue-600 to-indigo-700">
-               <InputField label="University Name" value={formData.universityName} onChange={(v) => setFormData({...formData, universityName: v})} required />
+              
+<InputField 
+  label="University Name" 
+  value={formData.universityName} 
+  onChange={(v) => setFormData({...formData, universityName: v})} 
+  required 
+/>
                <div className="space-y-1">
                  <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1">University Department</label>
                  <select className="w-full p-4 bg-gray-50 border-none rounded-2xl text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all" value={formData.universityDept} onChange={(e) => setFormData({...formData, universityDept: e.target.value})}>
